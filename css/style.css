@@ -27,26 +27,26 @@ body {
 @keyframes sliderTitle {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
+    transform: translateY(-5rem); }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateY(0); } }
 
 @keyframes sliderInfo {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateY(10rem); }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateY(0); } }
 
 @keyframes sliderButton {
   0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
+    opacity: 0; }
+  50% {
+    opacity: 0; }
   100% {
-    opacity: 1;
-    transform: translateX(0); } }
+    opacity: 1; } }
 
 @keyframes spin {
   from {
@@ -112,7 +112,7 @@ body {
     animation: sliderInfo 1s ease; }
   .slider__btn {
     text-decoration: none;
-    animation: sliderButton 1s ease; }
+    animation: sliderButton 1s ease-in-out; }
 
 @media (min-width: 600px) {
   .slider__title {
