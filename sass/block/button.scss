@@ -1,0 +1,24 @@
+.btn {
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  color: $color-white;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(#1e90ff, 0.9),
+    rgba(#00008b, 0.9)
+  );
+}
+
+@media (min-width: 600px) {
+  .btn {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .btn {
+    font-size: 2rem;
+  }
+}

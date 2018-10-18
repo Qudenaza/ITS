@@ -1,0 +1,250 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: 'PT Sans Narrow', serif; }
+
+.visually-hidden .visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+@keyframes sliderTitle {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes sliderInfo {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes sliderButton {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.slider {
+  position: relative;
+  height: 100vh;
+  color: #f1f1f1; }
+  .slider__controls {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 10%; }
+  .slider__control {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    border: 2px solid #483d8b;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.2s; }
+    .slider__control:hover {
+      transform: scale(1.1); }
+    .slider__control:focus {
+      outline: none; }
+    .slider__control--active {
+      background: #6a5acd; }
+  .slider__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 32rem;
+    height: 100%;
+    margin: 0 auto;
+    padding: 2rem; }
+  .slider__slide {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden; }
+    .slider__slide--1 {
+      background-image: linear-gradient(to right bottom, rgba(106, 90, 205, 0.8), rgba(72, 61, 139, 0.8)), url("../img/conditioner-mobile.jpg"); }
+    .slider__slide--2 {
+      background-image: linear-gradient(to right bottom, rgba(106, 90, 205, 0.8), rgba(72, 61, 139, 0.8)), url("../img/ventilation-mobile.jpg"); }
+    .slider__slide--3 {
+      background-image: linear-gradient(to right bottom, rgba(106, 90, 205, 0.8), rgba(72, 61, 139, 0.8)), url("../img/calculate-mobile.jpg"); }
+  .slider__title {
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    animation: sliderTitle 1s ease; }
+  .slider__info {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    animation: sliderInfo 1s ease; }
+  .slider__btn {
+    text-decoration: none;
+    animation: sliderButton 1s ease; }
+
+@media (min-width: 600px) {
+  .slider__title {
+    font-size: 2.5rem; }
+  .slider__info {
+    width: 70%;
+    font-size: 2rem; }
+  .slider__slide--2 {
+    background-image: linear-gradient(to right bottom, rgba(106, 90, 205, 0.8), rgba(72, 61, 139, 0.8)), url("../img/ventilation-tablet.jpg"); }
+  .slider__slide--3 {
+    background-image: linear-gradient(to right bottom, rgba(106, 90, 205, 0.8), rgba(72, 61, 139, 0.8)), url("../img/calculate-tablet.jpg"); } }
+
+@media (min-width: 1200px) {
+  .slider__wrapper {
+    max-width: 120rem; }
+  .slider__title {
+    font-size: 3rem; }
+  .slider__info {
+    width: 70%;
+    font-size: 2.5rem; }
+  .slider__slide {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden; }
+    .slider__slide--1 {
+      background-image: linear-gradient(to right bottom, rgba(106, 90, 205, 0.8), rgba(72, 61, 139, 0.8)), url("../img/conditioner-desktop.jpg"); }
+    .slider__slide--2 {
+      background-image: linear-gradient(to right bottom, rgba(106, 90, 205, 0.8), rgba(72, 61, 139, 0.8)), url("../img/ventilation-desktop.jpg"); }
+    .slider__slide--3 {
+      background-image: linear-gradient(to right bottom, rgba(106, 90, 205, 0.8), rgba(72, 61, 139, 0.8)), url("../img/calculate-desktop.jpg"); } }
+
+@media (min-width: 1500px) {
+  .slider__title {
+    font-size: 5rem; }
+  .slider__info {
+    width: 70%;
+    font-size: 3rem; } }
+
+.main {
+  background: #f1f1f1; }
+
+.companies {
+  padding: 2rem;
+  background: #f1f1f1; }
+  .companies__title {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 2rem; }
+    .companies__title::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 5px;
+      left: 0;
+      top: 0;
+      background: #483d8b; }
+  .companies__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .companies__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 10rem; }
+
+@media (min-width: 600px) {
+  .companies__title {
+    font-size: 2.5rem; } }
+
+@media (min-width: 1200px) {
+  .companies {
+    padding-top: 5rem;
+    max-width: 120rem;
+    margin: 0 auto; }
+    .companies__title {
+      font-size: 3rem;
+      margin-bottom: 5rem; }
+    .companies__item {
+      margin-right: 2rem;
+      opacity: 0.3; }
+      .companies__item:hover {
+        opacity: 1; } }
+
+@media (min-width: 1500px) {
+  .companies__title {
+    font-size: 5rem; } }
+
+.btn {
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  color: #f1f1f1;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right bottom, rgba(30, 144, 255, 0.9), rgba(0, 0, 139, 0.9)); }
+
+@media (min-width: 600px) {
+  .btn {
+    font-size: 1.6rem; } }
+
+@media (min-width: 1500px) {
+  .btn {
+    font-size: 2rem; } }
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: black;
+  z-index: 222; }
+  .overlay::after {
+    position: absolute;
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid #f3f3f3;
+    border-top: 3px solid #483d8b;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 223;
+    animation: spin 0.4s infinite linear; }
+
+@media (min-width: 600px) {
+  .overlay::after {
+    width: 8rem;
+    height: 8rem; } }

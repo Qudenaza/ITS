@@ -1,0 +1,196 @@
+.slider {
+  position: relative;
+  height: 100vh;
+  color: $color-white;
+
+  &__controls {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 10%;
+  }
+
+  &__control {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &--active {
+      background: $color-secondary;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 32rem;
+    height: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  &__slide {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backface-visibility: hidden;
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary, 0.8),
+          rgba($color-primary, 0.8)
+        ),
+        url('../img/conditioner-mobile.jpg');
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary, 0.8),
+          rgba($color-primary, 0.8)
+        ),
+        url('../img/ventilation-mobile.jpg');
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-secondary, 0.8),
+          rgba($color-primary, 0.8)
+        ),
+        url('../img/calculate-mobile.jpg');
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    animation: sliderTitle 1s ease;
+  }
+
+  &__info {
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    animation: sliderInfo 1s ease;
+  }
+
+  &__btn {
+    text-decoration: none;
+    animation: sliderButton 1s ease;
+  }
+}
+
+@media (min-width: 600px) {
+  .slider {
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__info {
+      width: 70%;
+      font-size: 2rem;
+    }
+
+    &__slide {
+      &--2 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary, 0.8),
+            rgba($color-primary, 0.8)
+          ),
+          url('../img/ventilation-tablet.jpg');
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary, 0.8),
+            rgba($color-primary, 0.8)
+          ),
+          url('../img/calculate-tablet.jpg');
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider {
+    &__wrapper {
+      max-width: 120rem;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__info {
+      width: 70%;
+      font-size: 2.5rem;
+    }
+
+    &__slide {
+      height: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      backface-visibility: hidden;
+      &--1 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary, 0.8),
+            rgba($color-primary, 0.8)
+          ),
+          url('../img/conditioner-desktop.jpg');
+      }
+
+      &--2 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary, 0.8),
+            rgba($color-primary, 0.8)
+          ),
+          url('../img/ventilation-desktop.jpg');
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-secondary, 0.8),
+            rgba($color-primary, 0.8)
+          ),
+          url('../img/calculate-desktop.jpg');
+      }
+    }
+  }
+}
+
+@media (min-width: 1500px) {
+  .slider {
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__info {
+      width: 70%;
+      font-size: 3rem;
+    }
+  }
+}

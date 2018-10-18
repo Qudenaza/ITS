@@ -1,0 +1,35 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 1);
+  z-index: 222;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid #f3f3f3;
+    border-top: 3px solid $color-primary;
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 223;
+    animation: spin 0.4s infinite linear;
+  }
+}
+
+@media (min-width: 600px) {
+  .overlay {
+    &::after {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+}
