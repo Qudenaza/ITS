@@ -1,9 +1,9 @@
-//document.addEventListener('DOMContentLoaded', () => {
-//setTimeout(
-//() => (document.querySelector('.overlay').style.display = 'none'),
-// 1000
-// );
-//});
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(
+    () => (document.querySelector('.overlay').style.display = 'none'),
+    1000
+  );
+});
 
 const slides = document.querySelectorAll('.slider__slide'),
   dots = document.querySelectorAll('.slider__control');

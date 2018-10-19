@@ -247,22 +247,25 @@ body {
     margin-top: 4rem;
     text-align: center; }
   .steps__step {
-    padding: 6rem 2rem 2rem 2rem;
-    margin-bottom: 4rem; }
+    padding: 6rem 2rem 0 2rem; }
+    .steps__step:not(:last-child) {
+      padding-bottom: 6rem;
+      margin-bottom: 3rem; }
     .steps__step--1 {
-      background: url("../img/step-1.svg") no-repeat top center;
+      background: url("../img/step-1.svg") no-repeat top center, url("../img/arrow-down.svg") no-repeat bottom center;
       background-size: 5rem; }
     .steps__step--2 {
-      background: url("../img/step-2.svg") no-repeat top center;
+      background: url("../img/step-2.svg") no-repeat top center, url("../img/arrow-down.svg") no-repeat bottom center;
       background-size: 5rem; }
     .steps__step--3 {
-      background: url("../img/step-3.svg") no-repeat top center;
+      background: url("../img/step-3.svg") no-repeat top center, url("../img/arrow-down.svg") no-repeat bottom center;
       background-size: 5rem; }
     .steps__step--4 {
       background: url("../img/step-4.svg") no-repeat top center;
       background-size: 5rem; }
   .steps__title {
     position: relative;
+    margin-bottom: 1rem;
     font-size: 1.5rem; }
 
 @media (min-width: 600px) {
@@ -281,6 +284,7 @@ body {
     padding: 8rem 0 0 0;
     background-position: top center; }
   .steps__title {
+    padding: 0 2rem;
     font-size: 2rem; } }
 
 .overlay {

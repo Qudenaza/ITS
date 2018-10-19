@@ -46,21 +46,28 @@
   }
 
   &__step {
-    padding: 6rem 2rem 2rem 2rem;
-    margin-bottom: 4rem;
+    padding: 6rem 2rem 0 2rem;
+
+    &:not(:last-child) {
+      padding-bottom: 6rem;
+      margin-bottom: 3rem;
+    }
 
     &--1 {
-      background: url('../img/step-1.svg') no-repeat top center;
+      background: url('../img/step-1.svg') no-repeat top center,
+        url('../img/arrow-down.svg') no-repeat bottom center;
       background-size: 5rem;
     }
 
     &--2 {
-      background: url('../img/step-2.svg') no-repeat top center;
+      background: url('../img/step-2.svg') no-repeat top center,
+        url('../img/arrow-down.svg') no-repeat bottom center;
       background-size: 5rem;
     }
 
     &--3 {
-      background: url('../img/step-3.svg') no-repeat top center;
+      background: url('../img/step-3.svg') no-repeat top center,
+        url('../img/arrow-down.svg') no-repeat bottom center;
       background-size: 5rem;
     }
 
@@ -72,6 +79,7 @@
 
   &__title {
     position: relative;
+    margin-bottom: 1rem;
     font-size: 1.5rem;
   }
 }
@@ -103,6 +111,7 @@
     }
 
     &__title {
+      padding: 0 2rem;
       font-size: 2rem;
     }
   }
