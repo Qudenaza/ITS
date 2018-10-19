@@ -37,14 +37,6 @@
   }
 }
 
-@media (min-width: 600px) {
-  .companies {
-    &__title {
-      font-size: 2.5rem;
-    }
-  }
-}
-
 @media (min-width: 1200px) {
   .companies {
     padding-top: 5rem;
@@ -52,7 +44,6 @@
     margin: 0 auto;
 
     &__title {
-      font-size: 3rem;
       margin-bottom: 5rem;
     }
 
@@ -63,14 +54,6 @@
       &:hover {
         opacity: 1;
       }
-    }
-  }
-}
-
-@media (min-width: 1500px) {
-  .companies {
-    &__title {
-      font-size: 5rem;
     }
   }
 }

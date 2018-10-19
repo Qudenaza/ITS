@@ -1,0 +1,109 @@
+.title {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 5px;
+    left: 0;
+    top: 0;
+    background: $color-primary;
+  }
+}
+
+@media (min-width: 600px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    margin-bottom: 6rem;
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  .title {
+    font-size: 5rem;
+  }
+}
+
+.steps {
+  padding: 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  border-top: 1px solid lightgray;
+
+  &__wrapper {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  &__step {
+    padding: 6rem 2rem 2rem 2rem;
+    margin-bottom: 4rem;
+
+    &--1 {
+      background: url('../img/step-1.svg') no-repeat top center;
+      background-size: 5rem;
+    }
+
+    &--2 {
+      background: url('../img/step-2.svg') no-repeat top center;
+      background-size: 5rem;
+    }
+
+    &--3 {
+      background: url('../img/step-3.svg') no-repeat top center;
+      background-size: 5rem;
+    }
+
+    &--4 {
+      background: url('../img/step-4.svg') no-repeat top center;
+      background-size: 5rem;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .steps {
+    &__wrapper {
+      text-align: left;
+    }
+
+    &__step {
+      padding: 3rem 0 3rem 10rem;
+      background-position: left center;
+      background-size: 7rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .steps {
+    &__wrapper {
+      display: flex;
+      text-align: center;
+    }
+
+    &__step {
+      padding: 8rem 0 0 0;
+      background-position: top center;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
