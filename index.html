@@ -16,6 +16,39 @@
 <body>
   <div class="overlay"></div>
   <header class="page-header">
+    <nav class="user-nav user-nav--closed user-nav--nojs">
+      <a class="user-nav__logo">ITS Service
+        <!--<picture>
+            <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Логотип сайта">
+          </picture>-->
+      </a>
+      <button class="user-nav__toggle" type="button">
+        <span class="visually-hidden">Меню</span>
+      </button>
+      <div class="user-nav__wrapper">
+        <ul class="user-nav__list">
+          <li class="user-nav__item">
+            <a class="user-nav__link user-nav__link--phone" tel="8-800-555-3535">8-800-555-3535</a>
+            <span class="user-nav__time">(8:00 - 22:00)</span>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Главная</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Ремонт и обслуживание кондиционеров</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Чистка систем вентиляции</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Расчет и подбор систем вентиляции</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <section class="slider">
       <div class="slider__controls">
         <button class="slider__control" onClick="showSlides(0)"></button>
@@ -50,6 +83,20 @@
     </section>
   </header>
   <main class="main">
+    <section class="conditioner">
+      <h2 class="conditioner__title title">Мы предоставляем следующие услуги</h2>
+      <ul class="conditioner__list">
+        <li class="conditioner__item">Ремонт кондиционеров</li>
+        <li class="conditioner__item">Еще что-то</li>
+        <li class="conditioner__item">Ремонт тепловых насосов</li>
+        <li class="conditioner__item">Еще что-то</li>
+        <li class="conditioner__item">Настройка кондиционера</li>
+        <li class="conditioner__item">Замена фриона</li>
+        <li class="conditioner__item">Обслуживание кондиционера</li>
+        <li class="conditioner__item">Еще что-то</li>
+      </ul>
+
+    </section>
     <section class="companies">
       <h2 class="companies__title title">Работаем со всеми марками кондиционеров</h2>
       <div class="owl-carousel owl-theme">
@@ -64,9 +111,6 @@
         </div>
         <div class="item companies__item">
           <img src="img/gree.png" alt="Гри">
-        </div>
-        <div class="item companies__item">
-          <img src="img/haier.png" alt="Хаиер" height="100px">
         </div>
         <div class="item companies__item">
           <img src="img/hitachi.png" alt="Хитачи">

@@ -44,3 +44,28 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes slideInDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    display: none;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    display: block;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(-100%);
+    display: none;
+  }
+}
