@@ -5,6 +5,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2rem;
+  z-index: 1;
   background: $color-primary;
   box-shadow: 0 2px 1rem 0 rgba(0, 0, 0, 0.3);
 
@@ -13,6 +14,7 @@
     position: relative;
     width: 2.5rem;
     height: 2.5rem;
+    z-index: 3;
     border: none;
     background: transparent;
 
@@ -49,6 +51,7 @@
   }
 
   &__logo {
+    z-index: 3;
     font-size: 2rem;
     color: #f1f1f1;
 
@@ -63,9 +66,8 @@
   &__wrapper {
     position: absolute;
     width: 100%;
-    top: 6rem;
+    top: 0;
     left: 0;
-    z-index: -1;
   }
 
   &__list {
@@ -79,6 +81,10 @@
     border-bottom: 1px solid #777;
 
     &:first-child {
+      padding: 3.3rem 2rem;
+    }
+
+    &:nth-child(2) {
       display: flex;
       justify-content: space-between;
       align-items: center;
