@@ -8,7 +8,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    bottom: 5%;
+    bottom: 4rem;
+    z-index: 2;
   }
 
   &__control {
@@ -41,7 +42,7 @@
     justify-content: center;
     align-items: flex-start;
     min-width: 32rem;
-    padding: 6rem 2rem;
+    padding: 6rem 2rem 10rem 2rem;
   }
 
   &__slide {
@@ -49,13 +50,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     backface-visibility: hidden;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+
     &--1 {
       background-image: linear-gradient(
           to right bottom,
           rgba($color-secondary, 0.8),
           rgba($color-primary, 0.8)
         ),
-        url('../img/conditioner-mobile.jpg');
+        url('../img/conditioner-repair.jpg');
     }
 
     &--2 {
