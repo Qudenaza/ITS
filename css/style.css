@@ -73,10 +73,6 @@ body {
     transform: translateY(-100%);
     display: none; } }
 
-.main {
-  position: relative;
-  z-index: -2; }
-
 .user-nav {
   position: relative;
   display: flex;
@@ -91,7 +87,7 @@ body {
     border: none; }
     .user-nav__toggle, .user-nav__toggle::before, .user-nav__toggle::after {
       display: inline-block;
-      width: 2.5rem;
+      width: 3rem;
       height: 2px;
       background: #f1f1f1;
       transition: all 0.3s; }
