@@ -135,11 +135,11 @@
 
 @media (max-width: 768px) {
   .user-nav--closed .user-nav__wrapper {
-    animation: slideInUp 1s ease forwards;
+    animation: slideInUp 0.5s ease forwards;
   }
 
   .user-nav--opened .user-nav__wrapper {
-    animation: slideInDown 1s ease forwards;
+    animation: slideInDown 0.5s ease forwards;
   }
 
   .user-nav--nojs .user-nav__toggle {
@@ -151,39 +151,69 @@
   }
 }
 
-.conditioner {
-  background: $color-primary;
+.form {
   color: $color-white;
-  padding: 2rem;
+  padding: 5rem 2rem 3rem 2rem;
+  background: $color-primary;
   -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
 
   &__title {
-    margin-top: 4rem;
-
     &::before {
       background: lightskyblue;
     }
   }
 
-  &__list {
-    list-style: none;
+  &__group {
+    margin-bottom: 1.5rem;
   }
 
-  &__item {
-    position: relative;
-    padding: 1rem 1rem 1rem 2rem;
-    font-size: 1.4rem;
+  &__label {
+    display: block;
+    margin-top: 0.5rem;
+    margin-left: 1.25rem;
+    font-size: 1.3rem;
+    transition: all 0.3s;
+  }
 
-    &::before {
-      position: absolute;
-      content: '';
-      width: 5px;
-      height: 5px;
-      top: 50%;
-      left: 0;
-      background: lightskyblue;
-      border-radius: 50%;
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-family: inherit;
+    border: 0;
+    border-bottom: 2px solid #55c57a;
+    border-radius: 2px;
+    transition: all 0.2s;
+    background: $color-white;
+
+    &:placeholder-shown ~ &__label {
+      transform: translateY(-2.5rem);
+      opacity: 0;
+      visibility: hidden;
     }
+
+    &:placeholder-shown {
+      border-bottom: 2px solid transparent;
+    }
+
+    &:invalid {
+      border-bottom: 2px solid #ff7730;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__input:placeholder-shown ~ &__label {
+    transform: translateY(-2.5rem);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__btn {
+    border: none;
   }
 }

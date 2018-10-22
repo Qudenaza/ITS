@@ -160,39 +160,57 @@ body {
 
 @media (max-width: 768px) {
   .user-nav--closed .user-nav__wrapper {
-    animation: slideInUp 1s ease forwards; }
+    animation: slideInUp 0.5s ease forwards; }
   .user-nav--opened .user-nav__wrapper {
-    animation: slideInDown 1s ease forwards; }
+    animation: slideInDown 0.5s ease forwards; }
   .user-nav--nojs .user-nav__toggle {
     display: none; }
   .user-nav--nojs .user-nav__wrapper {
     display: block; } }
 
-.conditioner {
-  background: #483d8b;
+.form {
   color: #f1f1f1;
-  padding: 2rem;
+  padding: 5rem 2rem 3rem 2rem;
+  background: #483d8b;
   -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
   clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%); }
-  .conditioner__title {
-    margin-top: 4rem; }
-    .conditioner__title::before {
-      background: lightskyblue; }
-  .conditioner__list {
-    list-style: none; }
-  .conditioner__item {
-    position: relative;
-    padding: 1rem 1rem 1rem 2rem;
-    font-size: 1.4rem; }
-    .conditioner__item::before {
-      position: absolute;
-      content: '';
-      width: 5px;
-      height: 5px;
-      top: 50%;
-      left: 0;
-      background: lightskyblue;
-      border-radius: 50%; }
+  .form__title::before {
+    background: lightskyblue; }
+  .form__group {
+    margin-bottom: 1.5rem; }
+  .form__label {
+    display: block;
+    margin-top: 0.5rem;
+    margin-left: 1.25rem;
+    font-size: 1.3rem;
+    transition: all 0.3s; }
+  .form__input {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-family: inherit;
+    border: 0;
+    border-bottom: 2px solid #55c57a;
+    border-radius: 2px;
+    transition: all 0.2s;
+    background: #f1f1f1; }
+    .form__input:placeholder-shown ~ .form__input__label {
+      transform: translateY(-2.5rem);
+      opacity: 0;
+      visibility: hidden; }
+    .form__input:placeholder-shown {
+      border-bottom: 2px solid transparent; }
+    .form__input:invalid {
+      border-bottom: 2px solid #ff7730; }
+    .form__input:focus {
+      outline: 0;
+      box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1); }
+  .form__input:placeholder-shown ~ .form__label {
+    transform: translateY(-2.5rem);
+    opacity: 0;
+    visibility: hidden; }
+  .form__btn {
+    border: none; }
 
 .slider {
   position: relative;
@@ -293,11 +311,8 @@ body {
     width: 70%;
     font-size: 3rem; } }
 
-.main {
-  background: #f1f1f1; }
-
 .companies {
-  padding: 2rem;
+  padding: 3rem 2rem;
   background: #f1f1f1; }
   .companies__title {
     position: relative;
@@ -356,34 +371,8 @@ body {
   .btn {
     font-size: 2rem; } }
 
-.title {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
-  font-size: 2rem; }
-  .title::before {
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 5px;
-    left: 0;
-    top: 0; }
-
-@media (min-width: 600px) {
-  .title {
-    font-size: 2.5rem; } }
-
-@media (min-width: 1200px) {
-  .title {
-    margin-bottom: 6rem;
-    font-size: 3rem; } }
-
-@media (min-width: 1500px) {
-  .title {
-    font-size: 5rem; } }
-
 .steps {
-  padding: 2rem;
+  padding: 3rem 2rem;
   max-width: 120rem;
   margin: 0 auto; }
   .steps__wrapper {
@@ -431,6 +420,61 @@ body {
   .steps__title {
     padding: 0 2rem;
     font-size: 2rem; } }
+
+.title {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem; }
+  .title::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 5px;
+    left: 0;
+    top: 0; }
+
+@media (min-width: 600px) {
+  .title {
+    font-size: 2.5rem; } }
+
+@media (min-width: 1200px) {
+  .title {
+    margin-bottom: 6rem;
+    font-size: 3rem; } }
+
+@media (min-width: 1500px) {
+  .title {
+    font-size: 5rem; } }
+
+.conditioner {
+  background: #483d8b;
+  color: #f1f1f1;
+  padding: 3rem 2rem;
+  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%); }
+  .conditioner__title {
+    margin-top: 4rem; }
+    .conditioner__title::before {
+      background: lightskyblue; }
+  .conditioner__list {
+    list-style: none; }
+  .conditioner__item {
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+    font-size: 1.4rem; }
+    .conditioner__item::before {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 5px;
+      top: 50%;
+      left: 0;
+      background: lightskyblue;
+      border-radius: 50%; }
+
+.main {
+  background-color: #f1f1f1; }
 
 .overlay {
   position: fixed;

@@ -64,7 +64,7 @@
           <h2 class="slider__title">Ремонт и обслуживание кондиционеров</h2>
           <p class="slider__info">Сломался кондиционер? Оставьте заявку на сайте или позвоните по номеру указанному выше и наши мастера свяжуться
             с вами и решат проблему.</p>
-          <a class="slider__btn btn" href="#">Оставить заявку</a>
+          <a class="slider__btn btn" href="#name">Оставить заявку</a>
         </div>
       </div>
       <div class="slider__slide slider__slide--2">
@@ -163,6 +163,20 @@
             по своем делам</p>
         </div>
       </div>
+    </section>
+    <section class="form">
+      <h2 class="form__title title">Оставьте вашу заявку</h2>
+      <form class="form__form" action="#">
+        <div class="form__group">
+          <input class="form__input" id="name" type="text" name="name" placeholder="Ваше имя" required>
+          <label class="form__label" for="name">Ваше имя</label>
+        </div>
+        <div class="form__group">
+          <input class="form__input" id="phone" type="text" name="phone" placeholder="Например: 89172234413" pattern="[0-9]{,3}" required>
+          <label class="form__label" for="phone">Ваш телефон</label>
+        </div>
+        <button class="form__btn btn" type="submit">Отправить</button>
+      </form>
     </section>
   </main>
   <script src="js/jquery-3.3.1.min.js"></script>

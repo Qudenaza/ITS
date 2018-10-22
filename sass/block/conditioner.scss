@@ -1,0 +1,36 @@
+.conditioner {
+  background: $color-primary;
+  color: $color-white;
+  padding: 3rem 2rem;
+  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+
+  &__title {
+    margin-top: 4rem;
+
+    &::before {
+      background: lightskyblue;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+    font-size: 1.4rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 5px;
+      top: 50%;
+      left: 0;
+      background: lightskyblue;
+      border-radius: 50%;
+    }
+  }
+}
