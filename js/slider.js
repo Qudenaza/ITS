@@ -28,10 +28,10 @@ showSlides(0);
 
 var x = 0;
 
-// setInterval(function() {
-//   showSlides(x++);
-//   x >= slides.length ? (x = 0) : x;
-// }, 6000);
+setInterval(function() {
+  showSlides(x++);
+  x >= slides.length ? (x = 0) : x;
+}, 6000);
 
 $('.owl-carousel').owlCarousel({
   loop: true,
