@@ -28,7 +28,7 @@ showSlides(0);
 
 var x = 0;
 
-setInterval(function() {
+setInterval(function () {
   showSlides(x++);
   x >= slides.length ? (x = 0) : x;
 }, 6000);
@@ -57,7 +57,7 @@ var navToggle = document.querySelector('.user-nav__toggle');
 
 navMain.classList.remove('user-nav--nojs');
 
-navToggle.addEventListener('click', function() {
+navToggle.addEventListener('click', function () {
   if (navMain.classList.contains('user-nav--closed')) {
     navMain.classList.remove('user-nav--closed');
     navMain.classList.add('user-nav--opened');
@@ -67,7 +67,7 @@ navToggle.addEventListener('click', function() {
   }
 });
 
-$('a[href^="#"]').bind('click.smoothscroll', function(e) {
+$('a[href^="#"]').bind('click.smoothscroll', function (e) {
   e.preventDefault();
 
   var target = this.hash,
@@ -75,13 +75,12 @@ $('a[href^="#"]').bind('click.smoothscroll', function(e) {
 
   $('html, body')
     .stop()
-    .animate(
-      {
-        scrollTop: $target.offset().top
+    .animate({
+        scrollTop: $target.offset().top - 100
       },
       500,
       'swing',
-      function() {
+      function () {
         window.location.hash = target;
       }
     );

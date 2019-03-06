@@ -1,5 +1,5 @@
 .steps {
-  padding: 3rem 2rem;
+  padding: 5rem 2rem;
   max-width: 120rem;
   margin: 0 auto;
 
@@ -9,6 +9,8 @@
   }
 
   &__title {
+    margin-bottom: 10rem !important;
+
     &::before {
       background: $color-primary;
     }

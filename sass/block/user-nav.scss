@@ -5,9 +5,8 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 2rem;
-  z-index: 1;
-  background: $color-primary;
-  box-shadow: 0 2px 1rem 0 rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  font-family: 'PT Sans', 'serif';
 
   &__toggle {
     display: flex;
@@ -24,13 +23,14 @@
   }
 
   &__burger {
+
     &,
     &::before,
     &::after {
       display: inline-block;
       width: 100%;
       height: 2px;
-      background: $color-white;
+      background: $color-yellow;
       transition: all 0.2s;
     }
 
@@ -53,11 +53,14 @@
   &__logo {
     z-index: 3;
     font-size: 2rem;
-    color: #f1f1f1;
+    color: $color-yellow;
+    border: 2px solid $color-white;
+    padding: 0.5rem;
 
     &:hover {
       opacity: 0.6;
     }
+
     &:active {
       opacity: 0.3;
     }
@@ -81,19 +84,24 @@
     border-bottom: 1px solid #777;
 
     &:first-child {
-      padding: 3.3rem 2rem;
+      padding: 4rem 2rem;
     }
 
-    &:nth-child(2) {
+    &--phone {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
       background: #555;
       border-bottom: none;
     }
   }
 
   &__time {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
     color: $color-white;
     font-size: 1.4rem;
   }
@@ -105,14 +113,19 @@
     text-decoration: none;
 
     &--phone {
-      padding-left: 2rem;
+      padding-left: 2.5rem;
       background: url('../img/phone.svg') no-repeat left center;
       background-size: 15%;
+
+      &:first-child {
+        margin-bottom: 1rem;
+      }
     }
 
     &:hover {
       opacity: 0.6;
     }
+
     &:active {
       opacity: 0.3;
     }

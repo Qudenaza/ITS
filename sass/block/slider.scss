@@ -2,6 +2,7 @@
   position: relative;
   font-family: 'Open Sans', sans-serif;
   color: $color-white;
+  margin-top: -8rem;
 
   &__controls {
     position: absolute;
@@ -17,7 +18,7 @@
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 1rem;
-    border: 2px solid $color-primary;
+    border: 2px solid $color-yellow;
     border-radius: 50%;
     cursor: pointer;
     background: transparent;
@@ -32,17 +33,18 @@
     }
 
     &--active {
-      background: $color-secondary;
+      background: $color-yellow;
     }
   }
 
   &__wrapper {
+    height: 47.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     min-width: 32rem;
-    padding: 6rem 2rem 10rem 2rem;
+    padding: 10rem 2rem 10rem 2rem;
   }
 
   &__slide {
@@ -50,33 +52,27 @@
     background-repeat: no-repeat;
     background-size: cover;
     backface-visibility: hidden;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
 
     &--1 {
-      background-image: linear-gradient(
-          to right bottom,
-          rgba($color-secondary, 0.8),
-          rgba($color-primary, 0.8)
-        ),
+      background-image: linear-gradient(to right bottom,
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)),
         url('../img/conditioner-repair.jpg');
     }
 
     &--2 {
-      background-image: linear-gradient(
-          to right bottom,
-          rgba($color-secondary, 0.8),
-          rgba($color-primary, 0.8)
-        ),
+      background-image: linear-gradient(to right bottom,
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)),
         url('../img/ventilation-mobile.jpg');
     }
 
     &--3 {
-      background-image: linear-gradient(
-          to right bottom,
-          rgba($color-secondary, 0.8),
-          rgba($color-primary, 0.8)
-        ),
+      background-image: linear-gradient(to right bottom,
+        rgba($color-black, 0.5),
+        rgba($color-black, 0.5)),
         url('../img/calculate-mobile.jpg');
     }
   }
@@ -113,20 +109,16 @@
 
     &__slide {
       &--2 {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-secondary, 0.8),
-            rgba($color-primary, 0.8)
-          ),
+        background-image: linear-gradient(to right bottom,
+          rgba($color-black, 0.5),
+          rgba($color-black, 0.5)),
           url('../img/ventilation-tablet.jpg');
       }
 
       &--3 {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-secondary, 0.8),
-            rgba($color-primary, 0.8)
-          ),
+        background-image: linear-gradient(to right bottom,
+          rgba($color-black, 0.5),
+          rgba($color-black, 0.5)),
           url('../img/calculate-tablet.jpg');
       }
     }
@@ -138,6 +130,7 @@
     &__wrapper {
       max-width: 120rem;
     }
+
     &__title {
       font-size: 3rem;
     }
@@ -153,30 +146,25 @@
       background-repeat: no-repeat;
       background-size: cover;
       backface-visibility: hidden;
+
       &--1 {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-secondary, 0.8),
-            rgba($color-primary, 0.8)
-          ),
+        background-image: linear-gradient(to right bottom,
+          rgba($color-black, 0.5),
+          rgba($color-black, 0.5)),
           url('../img/conditioner-desktop.jpg');
       }
 
       &--2 {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-secondary, 0.8),
-            rgba($color-primary, 0.8)
-          ),
+        background-image: linear-gradient(to right bottom,
+          rgba($color-black, 0.5),
+          rgba($color-black, 0.5)),
           url('../img/ventilation-desktop.jpg');
       }
 
       &--3 {
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-secondary, 0.8),
-            rgba($color-primary, 0.8)
-          ),
+        background-image: linear-gradient(to right bottom,
+          rgba($color-black, 0.5),
+          rgba($color-black, 0.5)),
           url('../img/calculate-desktop.jpg');
       }
     }

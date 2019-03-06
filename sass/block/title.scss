@@ -1,16 +1,26 @@
 .title {
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
 
   &::before {
     position: absolute;
     content: '';
+    width: 4px;
     height: 100%;
-    width: 5px;
     left: 0;
     top: 0;
+    background: #ffd700;
+  }
+
+  &__num {
+    position: absolute;
+    color: rgba(#ffd700, 0.8);
+    top: -3.5rem;
+    right: 1.5rem;
+    font-size: 9rem;
+    z-index: -1;
   }
 }
 

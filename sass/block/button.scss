@@ -1,9 +1,9 @@
 .btn {
-  padding: 1.5rem;
+  padding: 1rem;
   color: $color-white;
   font-size: 1.5rem;
-  border-radius: 2.5rem;
-  background: #dc143c;
+  // border-radius: 2.5rem;
+  border: 2px solid $color-yellow;
 
   &:active {
     transform: translateY(2px);
