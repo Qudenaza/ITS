@@ -3,8 +3,8 @@
   background: linear-gradient(to right bottom, #ffd700, #ffb300);
   color: $color-black;
   padding: 5rem 2rem 10rem 2rem;
-  -webkit-clip-path: polygon(0 2%, 100% 0%, 100% 96%, 0% 100%);
-  clip-path: polygon(0 2%, 100% 0%, 100% 96%, 0% 100%);
+  -webkit-clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
+  clip-path: polygon(0 2%, 100% 0%, 100% 98%, 0% 100%);
 
   &__title {
     margin-top: 4rem;
@@ -68,5 +68,6 @@
 
     font-size: 2rem;
     text-align: center;
+    text-transform: uppercase;
   }
 }

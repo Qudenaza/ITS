@@ -1,0 +1,49 @@
+.footer {
+  width: 100%;
+  padding: 2rem;
+
+  background: #2d2d44;
+
+  &__title {
+    margin-bottom: 0.5rem;
+
+    color: $color-white;
+    font-size: 1.4rem;
+  }
+
+  &__col {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 1rem;
+
+    color: $color-white;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    &--phone {
+      padding-left: 2rem;
+      background: url('../img/phone.svg') no-repeat left center;
+      background-size: 1.5rem;
+    }
+
+    &--email {
+      padding-left: 2rem;
+      background: url('../img/email.svg') no-repeat left center;
+      background-size: 1.5rem;
+    }
+  }
+
+  &__copyright {
+    margin-top: 2rem;
+
+    color: $color-white;
+    font-size: 1.2rem;
+  }
+}

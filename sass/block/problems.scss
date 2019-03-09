@@ -1,12 +1,35 @@
 .problems {
-  padding: 3rem 2rem;
-  background: $color-yellow;
+  padding: 5rem 2rem;
+  background: linear-gradient(to right bottom, #ffd700, #ffb300);
   -webkit-clip-path: polygon(0 2%, 100% 0%, 100% 96%, 0% 100%);
   clip-path: polygon(0 2%, 100% 0%, 100% 96%, 0% 100%);
 
+  &__vent {
+    padding-top: 3rem;
+
+    background: $color-white;
+
+    .problems__title {
+      &::before {
+        background: $color-yellow !important;
+      }
+
+      .title__num {
+        color: $color-yellow;
+      }
+    }
+  }
+
   &__title {
+    margin-top: 4rem;
+    margin-bottom: 6rem !important;
+
     &::before {
-      background: $color-primary;
+      background: $color-white !important;
+    }
+
+    span {
+      color: $color-white;
     }
   }
 
@@ -131,7 +154,6 @@
 }
 
 
-
 .problem {
   $b: &;
 
@@ -140,6 +162,7 @@
   border: 1px solid #eee;
   border-radius: 2.5rem;
   box-shadow: 0 0 1.6rem 0 rgba(0, 36, 78, .25);
+  background: $color-white;
 
   &__header {
     padding: 1rem 1rem 1rem 5rem;
@@ -150,6 +173,7 @@
     border-radius: 2.5rem;
     font-size: 1.5rem;
     font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
 
     &--drops {
       background: url('../img/drops.svg') no-repeat center 5rem;
@@ -229,6 +253,7 @@
     display: none;
     font-size: 1.5rem;
     font-family: 'Roboto';
+    line-height: 1.6;
     // border-bottom-right-radius: 2.5rem;
     // border-bottom-left-radius: 2.5rem;
 

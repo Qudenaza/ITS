@@ -1,13 +1,22 @@
 .form {
   color: $color-white;
-  padding: 5rem 2rem 3rem 2rem;
-  background: $color-primary;
-  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+  padding: 5rem 2rem 5rem 2rem;
+  background: linear-gradient(to right bottom, #ffd700, #ffb300);
+  -webkit-clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 100%);
 
   &__title {
+    margin-top: 4rem;
+    margin-bottom: 6rem !important;
+
+    color: $color-black;
+
     &::before {
-      background: lightskyblue;
+      background: $color-white !important;
+    }
+
+    span {
+      color: $color-white;
     }
   }
 
@@ -21,6 +30,7 @@
     margin-left: 1.25rem;
     font-size: 1.3rem;
     transition: all 0.3s;
+    color: $color-black;
   }
 
   &__input {
@@ -30,11 +40,11 @@
     font-family: inherit;
     border: 0;
     border-bottom: 2px solid #55c57a;
-    border-radius: 2px;
+    border-radius: 5px;
     transition: all 0.2s;
     background: $color-white;
 
-    &:placeholder-shown ~ &__label {
+    &:placeholder-shown~&__label {
       transform: translateY(-2.5rem);
       opacity: 0;
       visibility: hidden;
@@ -54,13 +64,17 @@
     }
   }
 
-  &__input:placeholder-shown ~ &__label {
+  &__input:placeholder-shown~&__label {
     transform: translateY(-2.5rem);
     opacity: 0;
     visibility: hidden;
   }
 
   &__btn {
-    border: none;
+    border: 2px solid $color-white;
+    background: transparent;
+    color: $color-black;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
   }
 }
