@@ -103,6 +103,7 @@ body {
   outline: none; }
 
 .up {
+  display: block;
   position: absolute;
   bottom: 12rem;
   right: 1rem;
@@ -257,27 +258,25 @@ body {
       background: transparent !important; }
   .form__close {
     position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    right: 2rem;
-    top: 2rem;
+    width: 3rem;
+    height: 3rem;
+    right: 1.5rem;
+    top: 1.5rem;
     background: transparent;
     border: none;
     z-index: 2; }
     .form__close::before, .form__close::after {
       position: absolute;
       content: '';
-      width: 100%;
+      width: 50%;
       height: 2px;
+      right: 25%;
+      top: 50%;
       background: #000000; }
     .form__close::before {
-      transform: rotate(45deg);
-      left: 0;
-      top: 50%; }
+      transform: rotate(45deg); }
     .form__close::after {
-      transform: rotate(-45deg);
-      left: 0;
-      top: 50%; }
+      transform: rotate(-45deg); }
   .form__form {
     margin-top: 3rem; }
   .form__group {

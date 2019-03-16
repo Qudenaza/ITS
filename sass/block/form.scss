@@ -27,10 +27,10 @@
 
   &__close {
     position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    right: 2rem;
-    top: 2rem;
+    width: 3rem;
+    height: 3rem;
+    right: 1.5rem;
+    top: 1.5rem;
     background: transparent;
     border: none;
     z-index: 2;
@@ -39,22 +39,20 @@
     &::after {
       position: absolute;
       content: '';
-      width: 100%;
+      width: 50%;
       height: 2px;
+      right: 25%;
+      top: 50%;
 
       background: $color-black;
     }
 
     &::before {
       transform: rotate(45deg);
-      left: 0;
-      top: 50%;
     }
 
     &::after {
       transform: rotate(-45deg);
-      left: 0;
-      top: 50%;
     }
   }
 
