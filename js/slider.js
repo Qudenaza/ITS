@@ -86,6 +86,10 @@ $('a[href^="#"]').bind('click.smoothscroll', function (e) {
     );
 });
 
+setInterval(function () {
+  $('.call-us').hasClass('pause') ? $('.call-us').removeClass('pause') : $('.call-us').addClass('pause');
+}, 2000);
+
 // const problemsItem = document.querySelectorAll('.problems__item'),
 //   closeBtn = document.querySelectorAll('.problems__close');
 
@@ -111,10 +115,24 @@ $(window).scroll(function (event) {
 });
 
 $('.js-form-open').on('click', function () {
-  $('.form').css('display', 'block');
+  modalOpen();
+
   $('.user-nav').removeClass('user-nav--opened').addClass('user-nav--closed');
 });
 
 $('.js-form-close').on('click', function () {
-  $('.form').css('display', 'none');
+  modalClose();
 });
+
+
+function modalOpen() {
+  $('.form').css('display', 'block');
+
+  $('.call-us').fadeOut();
+};
+
+function modalClose() {
+  $('.form').css('display', 'none');
+
+  $('.call-us').fadeIn();
+};

@@ -86,6 +86,45 @@ body {
   .btn {
     font-size: 2rem; } }
 
+.call-us {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  z-index: 3000;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/call.svg") no-repeat, crimson;
+  background-size: 50%;
+  border-radius: 50%;
+  border: none;
+  background-position: center;
+  animation: dance 0.2s linear infinite;
+  animation-play-state: running;
+  outline: none; }
+
+.up {
+  position: absolute;
+  bottom: 12rem;
+  right: 1rem;
+  z-index: 3000;
+  width: 6rem;
+  height: 6rem;
+  background: url("../img/up.svg") no-repeat, #fff;
+  background-size: 50%;
+  border-radius: 50%;
+  border: none;
+  background-position: center;
+  outline: none; }
+
+@keyframes dance {
+  0% {
+    transform: rotate(-20deg); }
+  100% {
+    transform: rotate(20deg); } }
+
+.pause {
+  animation-play-state: paused; }
+
 .page-header {
   overflow: hidden;
   height: 53rem; }
@@ -735,6 +774,7 @@ body {
   margin-top: -9rem; }
 
 .footer {
+  position: relative;
   width: 100%;
   padding: 2rem;
   background: #2d2d44; }
