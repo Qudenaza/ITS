@@ -41,16 +41,16 @@
             <a class="user-nav__link" href="#">Главная</a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#">Ремонт и обслуживание кондиционеров</a>
+            <a class="user-nav__link" href="#conditioner">Ремонт и обслуживание кондиционеров</a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#">Чистка систем вентиляции</a>
+            <a class="user-nav__link js-form-open">Чистка систем вентиляции</a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#">Расчет и подбор систем вентиляции</a>
+            <a class="user-nav__link" href="#vent">Расчет и подбор систем вентиляции</a>
           </li>
           <li class="user-nav__item">
-            <a class="user-nav__link" href="#">Расчет и подбор систем кондиционирования</a>
+            <a class="user-nav__link js-form-open">Расчет и подбор систем кондиционирования</a>
           </li>
         </ul>
       </div>
@@ -67,7 +67,7 @@
           <h2 class="slider__title">Ремонт и обслуживание кондиционеров</h2>
           <p class="slider__info">Сломался кондиционер? Оставьте заявку на сайте или позвоните по номеру указанному
             выше и с вами свяжутся.</p>
-          <a class="slider__btn btn" href="#name">Оставить заявку</a>
+          <button class="slider__btn btn js-form-open">Оставить заявку</button>
         </div>
       </div>
       <div class="slider__slide slider__slide--2">
@@ -75,7 +75,7 @@
           <h2 class="slider__title">Чистка систем вентиляции</h2>
           <p class="slider__info">Чистим вентиляцию любой сложности.
           </p>
-          <a class="slider__btn btn" href="#name">Оставить заявку</a>
+          <button class="slider__btn btn js-form-open">Оставить заявку</button>
         </div>
       </div>
       <div class="slider__slide slider__slide--3">
@@ -83,7 +83,7 @@
           <h2 class="slider__title">Расчет и подбор систем вентиляции</h2>
           <p class="slider__info">Вам нужно расчитать и подобрать систему вентиляции? Наши мастера всегда готовы прийти
             на помощь.</p>
-          <a class="slider__btn btn" href="#name">Оставить заявку</a>
+          <button class="slider__btn btn js-form-open">Оставить заявку</button>
         </div>
       </div>
     </section>
@@ -101,6 +101,7 @@
         <ul class="conditioner__list">
           <li class="conditioner__item">Систем кондиционирования воздуха</li>
           <li class="conditioner__item">Полупромышленных сплит-систем</li>
+          <li class="conditioner__item">Систем вентиляции</li>
         </ul>
       </div>
       <div class="conditioner__service">
@@ -176,7 +177,7 @@
       <h2 class="conditioner__title title">Мы предоставляем следующие услуги
         <span class="title__num">03</span>
       </h2>
-      <div class="conditioner__service">
+      <div class="conditioner__service" id="conditioner">
         <div class="conditioner__image">
           <img class="conditioner__img" src="img/conditioner.svg" alt="Кондиционер">
         </div>
@@ -190,7 +191,7 @@
           <li class="conditioner__item">Подбор и продажа кондиционеров</li>
         </ul>
       </div>
-      <div class="conditioner__service">
+      <div class="conditioner__service" id="vent">
         <div class="conditioner__image">
           <img class="conditioner__img" src="img/ventilation.svg" alt="Вентиляция">
         </div>
@@ -311,23 +312,6 @@
           quod distinctio.</p>
       </section>
     </section>
-    <section class="form">
-      <h2 class="form__title title">Оставьте вашу заявку
-        <span class="title__num">07</span>
-      </h2>
-      <form class="form__form" action="#" method="POST">
-        <div class="form__group">
-          <input class="form__input" id="name" type="text" name="name" placeholder="Ваше имя" required>
-          <label class="form__label" for="name">Ваше имя</label>
-        </div>
-        <div class="form__group">
-          <input class="form__input" id="phone" type="text" name="phone" placeholder="Например: 89172234413" pattern="[0-9]{11}"
-            required>
-          <label class="form__label" for="phone">Ваш телефон</label>
-        </div>
-        <button class="btn form__btn btn--red" type="submit">Отправить</button>
-      </form>
-    </section>
   </main>
   <footer class="footer">
     <section class="footer__contacts">
@@ -346,6 +330,23 @@
     <section class="footer__copyright">© ООО «ITS Service», 2015−2019
     </section>
   </footer>
+  <section class="form">
+    <button class="form__close js-form-close"></button>
+    <h2 class="form__title title">Оставьте вашу заявку
+    </h2>
+    <form class="form__form" action="#" method="POST">
+      <div class="form__group">
+        <input class="form__input" id="name" type="text" name="name" placeholder="Ваше имя" required>
+        <label class="form__label" for="name">Ваше имя</label>
+      </div>
+      <div class="form__group">
+        <input class="form__input" id="phone" type="text" name="phone" placeholder="Например: 89172234413" pattern="[0-9]{11}"
+          required>
+        <label class="form__label" for="phone">Ваш телефон</label>
+      </div>
+      <button class="btn form__btn btn--red" type="submit">Отправить</button>
+    </form>
+  </section>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/owl.carousel.js"></script>
   <script src="js/slider.js"></script>
@@ -353,96 +354,3 @@
 </body>
 
 </html>
-
-
-
-<!-- <div class="problems__wrapper">
-  <div class="problems__item problems__item--1">
-    <p class="problems__caption">Протикающая вода</p>
-    <div class="problems__popup">
-      <button class="problems__close">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <p class="problems__text">Одна из самых частых проблем, с которой сталкиваются владельцы кондиционера, это
-        протикающий конденсат. Основные причины
-        протикающего конденсата могут быть связаны с тем, что внутренний блок вовремя не обслуживался или же
-        вышла из строя помпа или засорился дреннаж. Данный вид проблемы не сложно решить, наши мастера обычно
-        решают все в течении часа.</p>
-    </div>
-  </div>
-  <div class="problems__item problems__item--2">
-    <p class="problems__caption">Не охлаждает</p>
-    <div class="problems__popup">
-      <button class="problems__close">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <p class="problems__text">Если кондиционер включается, но не охлождает, то одна из проблем которая может
-        быть это не хватка фреона.
-        Необходимо проверить давление в системе кондиционирования воздуха, при не хватка давления довести ее до
-        нужного уровня. Мы можем проверить
-        трубопроводы и ВПТ систему для удаления воздуха и влаги перед заполнением его с правильным количеством и
-        типом
-        хладагента. Этот процесс занимает в среднем более часа. Позвоните нашей команде по ремонту кондиционеров
-        сегодня.</p>
-    </div>
-  </div>
-  <div class="problems__item problems__item--3">
-    <p class="problems__caption">Не включается</p>
-    <div class="problems__popup">
-      <button class="problems__close">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <p class="problems__text">Причиной не включения кондиционера может быть поломка компрессора, конденсатора,
-        платы, электропитания.</p>
-    </div>
-  </div>
-  <div class="problems__item problems__item--4">
-    <p class="problems__caption">Шумит</p>
-    <div class="problems__popup">
-      <button class="problems__close">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <p class="problems__text">Если кондиционер производит больше шума, чем обычно, то может потребоваться
-        замена двигателя вентилятора, внутреннего блока или наружного блока. Все вышеперечисленное указывает на
-        неизбежную
-        неисправность системы, а ранняя диагностика и ремонт необходимы для предотвращения дальнейшего
-        повреждения.</p>
-    </div>
-  </div>
-  <div class="problems__item problems__item--5">
-    <p class="problems__caption">Неприятный запах</p>
-    <div class="problems__popup">
-      <button class="problems__close">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-      <p class="problems__text">Система кондиционирования во врему работы удаляет влагу из атмосферы, и,
-        следовательно за долгий период происходит скапление бактерий, которые
-        могут быть удалены только с помощью чистки специальным химическим веществом. Регулярное обслуживание,
-        является надежным способом устранения этих неприятных запахов.</p>
-    </div>
-  </div>
-</div>
-<div class="problems__item problems__item--7">
-  <p class="problems__caption">Утечка фреона</p>
-  <div class="problems__popup">
-    <button class="problems__close">
-      <span class="visually-hidden">Закрыть</span>
-    </button>
-    <p class="problems__text">Наши мастера имеют все необходимое оборудование, позволяющее найти
-      и устранить утечку газа. Этот процесс занимает 3 часа. Для критически
-      важных систем, таких как, например, установленные в серверных комнатах, мы также можем нанять портативные
-      кондиционеры,
-      чтобы сохранить вашу организацию и работает во время ремонта.</p>
-  </div>
-</div>
-<div class="problems__item problems__item--7">
-  <p class="problems__caption">Низкая производительность</p>
-  <div class="problems__popup">
-    <button class="problems__close">
-      <span class="visually-hidden">Закрыть</span>
-    </button>
-    <p class="problems__text">Регулярное техническое обслуживание агрегата позволит поддерживать оптимальную
-      производительность системы кондиционирования.Вызовите наших мастеров кондиционирования воздуха сегодня.</p>
-  </div>
-</div>
-</div> -->

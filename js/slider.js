@@ -76,7 +76,7 @@ $('a[href^="#"]').bind('click.smoothscroll', function (e) {
   $('html, body')
     .stop()
     .animate({
-        scrollTop: $target.offset().top - 100
+        scrollTop: $target.offset().top
       },
       500,
       'swing',
@@ -101,3 +101,20 @@ $('a[href^="#"]').bind('click.smoothscroll', function (e) {
 // function closePopup(e) {
 //   e.currentTarget.parentElement.style.display = 'none';
 // }
+
+$(window).scroll(function (event) {
+  var st = $(this).scrollTop();
+
+  if (st > 400) {
+    $('.user-nav').removeClass('user-nav--opened').addClass('user-nav--closed');
+  }
+});
+
+$('.js-form-open').on('click', function () {
+  $('.form').css('display', 'block');
+  $('.user-nav').removeClass('user-nav--opened').addClass('user-nav--closed');
+});
+
+$('.js-form-close').on('click', function () {
+  $('.form').css('display', 'none');
+});
