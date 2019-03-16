@@ -187,8 +187,21 @@
       background-position: 1rem center;
     }
 
+    &--off {
+      background: url('../img/off.svg') no-repeat center 5rem;
+      background-size: 2.5rem;
+      background-position: 1rem center;
+    }
+
     &--engine {
       background: url('../img/engine.svg') no-repeat center 5rem;
+      background-size: 2.5rem;
+      background-position: 1rem center;
+    }
+
+
+    &--chip {
+      background: url('../img/chip.svg') no-repeat center 5rem;
       background-size: 2.5rem;
       background-position: 1rem center;
     }

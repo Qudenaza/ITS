@@ -27,7 +27,7 @@
   &__label {
     display: block;
     margin-top: 0.5rem;
-    margin-left: 1.25rem;
+    margin-left: 1rem;
     font-size: 1.3rem;
     transition: all 0.3s;
     color: $color-black;
@@ -40,7 +40,6 @@
     font-family: inherit;
     border: 0;
     border-bottom: 2px solid #55c57a;
-    border-radius: 5px;
     transition: all 0.2s;
     background: $color-white;
 
@@ -71,10 +70,12 @@
   }
 
   &__btn {
-    border: 2px solid $color-white;
-    background: transparent;
-    color: $color-black;
-    font-weight: bold;
+    padding: 1rem 2.5rem;
+
+    border-radius: 2.5rem;
+    background: crimson;
+    color: $color-white;
     font-family: 'Roboto', sans-serif;
+    border: none;
   }
 }

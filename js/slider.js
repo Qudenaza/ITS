@@ -86,18 +86,18 @@ $('a[href^="#"]').bind('click.smoothscroll', function (e) {
     );
 });
 
-const problemsItem = document.querySelectorAll('.problems__item'),
-  closeBtn = document.querySelectorAll('.problems__close');
+// const problemsItem = document.querySelectorAll('.problems__item'),
+//   closeBtn = document.querySelectorAll('.problems__close');
 
-problemsItem.forEach(item => item.addEventListener('click', openPopup));
-closeBtn.forEach(btn => btn.addEventListener('click', closePopup));
+// problemsItem.forEach(item => item.addEventListener('click', openPopup));
+// closeBtn.forEach(btn => btn.addEventListener('click', closePopup));
 
-function openPopup(e) {
-  const popup = e.target.lastElementChild;
+// function openPopup(e) {
+//   const popup = e.target.lastElementChild;
 
-  popup.style.display = 'flex';
-}
+//   popup.style.display = 'flex';
+// }
 
-function closePopup(e) {
-  e.currentTarget.parentElement.style.display = 'none';
-}
+// function closePopup(e) {
+//   e.currentTarget.parentElement.style.display = 'none';
+// }
