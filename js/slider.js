@@ -90,21 +90,7 @@ setInterval(function () {
   $('.call-us').hasClass('pause') ? $('.call-us').removeClass('pause') : $('.call-us').addClass('pause');
 }, 2000);
 
-// const problemsItem = document.querySelectorAll('.problems__item'),
-//   closeBtn = document.querySelectorAll('.problems__close');
 
-// problemsItem.forEach(item => item.addEventListener('click', openPopup));
-// closeBtn.forEach(btn => btn.addEventListener('click', closePopup));
-
-// function openPopup(e) {
-//   const popup = e.target.lastElementChild;
-
-//   popup.style.display = 'flex';
-// }
-
-// function closePopup(e) {
-//   e.currentTarget.parentElement.style.display = 'none';
-// }
 
 $(window).scroll(function (event) {
   var st = $(this).scrollTop();
@@ -131,6 +117,8 @@ function modalOpen() {
   $('.call-us').css('display', 'none');
 
   $('.overlay').addClass('overlay--modal').css('display', 'block');
+
+  freeze();
 };
 
 function modalClose() {
@@ -139,4 +127,45 @@ function modalClose() {
   $('.call-us').css('display', 'block');
 
   $('.overlay').removeClass('overlay--modal').css('display', 'none');
+
+  unfreeze();
 };
+
+
+
+
+function freeze() {
+  const h = $('html');
+
+  if (h.css('position') !== 'fixed') {
+    const top = h.scrollTop() ? h.scrollTop() : $('body').scrollTop();
+
+    if (window.innerWidth > h.width()) {
+      h.css('overflow-y', 'scroll');
+    }
+
+    h.css({
+      width: '100%',
+      height: '100%',
+      position: 'fixed',
+      top: -top,
+    });
+  }
+}
+
+function unfreeze() {
+  const h = $('html');
+
+  if (h.css('position') === 'fixed') {
+    h.css('position', 'static');
+
+    $('html, body').scrollTop(-parseInt(h.css('top'), 10));
+    h.css({
+      position: '',
+      width: '',
+      height: '',
+      top: '',
+      'overflow-y': '',
+    });
+  }
+}
