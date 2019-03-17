@@ -128,11 +128,15 @@ $('.js-form-close').on('click', function () {
 function modalOpen() {
   $('.form').css('display', 'block');
 
-  $('.call-us').fadeOut();
+  $('.call-us').css('display', 'none');
+
+  $('.overlay').addClass('overlay--modal').css('display', 'block');
 };
 
 function modalClose() {
   $('.form').css('display', 'none');
 
-  $('.call-us').fadeIn();
+  $('.call-us').css('display', 'block');
+
+  $('.overlay').removeClass('overlay--modal').css('display', 'none');
 };

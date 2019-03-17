@@ -45,9 +45,9 @@ const $ = window.$;
 document.addEventListener('click', slideToggle);
 
 function slideToggle(e) {
-  e.preventDefault();
-
   if ($(e.target).hasClass('problem__header')) {
+    e.preventDefault();
+
     const body = $(e.target).siblings('.problem__body'),
       parent = $(e.target).parent();
 
