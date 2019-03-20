@@ -4,12 +4,11 @@
   margin: 0 auto;
 
   &__wrapper {
-    margin-top: 4rem;
+    margin-top: 8rem;
     text-align: center;
   }
 
   &__title {
-    margin-bottom: 10rem !important;
 
     &::before {
       background: $color-primary;
@@ -49,41 +48,44 @@
   }
 
   &__text {
+    max-width: 50rem;
+    margin: 0 auto;
     position: relative;
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-weight: 600;
   }
 }
 
-@media (min-width: 600px) {
-  .steps {
-    &__wrapper {
-      text-align: left;
-    }
+// @media (min-width: 600px) {
+//   .steps {
+//     &__wrapper {
+//       text-align: left;
+//     }
 
-    &__step {
-      padding: 3rem 0 3rem 10rem;
-      background-position: left center;
-      background-size: 7rem;
-    }
-  }
-}
+//     &__step {
+//       padding: 3rem 0 3rem 10rem;
+//       background-position: left center;
+//       background-size: 7rem;
+//     }
+//   }
+// }
 
-@media (min-width: 1200px) {
-  .steps {
-    &__wrapper {
-      display: flex;
-      text-align: center;
-    }
+// @media (min-width: 1200px) {
+//   .steps {
+//     &__wrapper {
+//       display: flex;
+//       text-align: center;
+//     }
 
-    &__step {
-      padding: 8rem 0 0 0;
-      background-position: top center;
-    }
+//     &__step {
+//       padding: 8rem 0 0 0;
+//       background-position: top center;
+//     }
 
-    &__title {
-      padding: 0 2rem;
-      font-size: 2rem;
-    }
-  }
-}
+//     &__title {
+//       padding: 0 2rem;
+//       font-size: 2rem;
+//     }
+//   }
+// }
