@@ -1,8 +1,8 @@
 .conditioner {
   // background: linear-gradient(to bottom right, #ffba00, #fce900) #ffd700;;
-  background: linear-gradient(to right bottom, #ffd700, #ffb300);
+  // background: linear-gradient(to right bottom, #ffd700, #ffb300);
   color: $color-black;
-  padding: 5rem 2rem 10rem 2rem;
+  padding: 2rem;
   -webkit-clip-path: polygon(0 2.5%, 100% 0%, 100% 98%, 0% 100%);
   clip-path: polygon(0 2.5%, 100% 0%, 100% 98%, 0% 100%);
 
@@ -11,11 +11,11 @@
     margin-bottom: 6rem;
 
     &::before {
-      background: $color-white;
+      background: $color-yellow;
     }
 
     span {
-      color: $color-white;
+      color: $color-yellow;
     }
   }
 

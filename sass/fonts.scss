@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'TTSmalls';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/TTSmallsRegular.eot');
+  src:
+    url('../fonts/TTSmallsRegular.woff2') format('woff2'),
+    url('../fonts/TTSmallsRegular.woff') format('woff'),
+    url('../fonts/TTSmallsRegular.ttf') format('truetype'),
+    url('../fonts/TTSmallsRegular.svg#TTSmallsRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'TTSmalls';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/TTSmallsMedium.eot');
+  src:
+    url('../fonts/TTSmallsMedium.woff2') format('woff2'),
+    url('../fonts/TTSmallsMedium.woff') format('woff'),
+    url('../fonts/TTSmallsMedium.ttf') format('truetype'),
+    url('../fonts/TTSmallsMedium.svg#TTSmallsMedium') format('svg');
+}
